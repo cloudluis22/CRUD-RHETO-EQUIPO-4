@@ -20,7 +20,9 @@ controller.list = (req, res) => {
         return;
       }
       console.log(rows);
-      res.render('users');
+      res.render('users', {
+        data: rows,
+      });
     });
   });
 };
