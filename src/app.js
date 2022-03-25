@@ -49,7 +49,7 @@ app.use(
 
 // ARCHIVOS ESTÁTICOS
 //--------------------------------------------
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 //--------------------------------------------
 
 // ROUTES

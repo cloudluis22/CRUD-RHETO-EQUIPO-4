@@ -1,0 +1,22 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+div.w-33 {
+    width: 100%;
+    background-color: rgba(255, 166, 0, 0);
+  }
+  
+  div.center {
+    text-align: center;
+  }
+
+div.container-lg{
+
+    margin-top: 5%;
+
+}
