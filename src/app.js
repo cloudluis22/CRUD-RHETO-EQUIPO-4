@@ -30,7 +30,7 @@ app.use(
       user: 'root',
       password: '',
       port: 3306,
-      database: 'rheto',
+      database: 'retho',
     },
     'single'
   )
