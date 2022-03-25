@@ -3,10 +3,9 @@ const controller = {};
 // Creando métodos del controlador.
 
 /**
- * Método encargado de hacer una petición a la base de
- * datos SQL y obtener una lista de todos los usuarios.
+ * Renderiza el view de inicio de sesión.
  */
-controller.login = (req, res) => {
+controller.show = (req, res) => {
   res.render('login');
 };
 

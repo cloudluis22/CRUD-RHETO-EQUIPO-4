@@ -45,6 +45,7 @@ app.use(
     'single'
   )
 );
+app.use(express.urlencoded({ extended: false }));
 
 //--------------------------------------------
 
