@@ -55,7 +55,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // ROUTES
 //--------------------------------------------
-app.use('/', loginRoutes);
+app.get('/', (req, res) => {
+  return res.redirect('/login');
+});
+app.use('/login', loginRoutes);
+app.use('/user', userRoutes);
 //--------------------------------------------
 
 // ARRANCANDO EL SERVIDOR
