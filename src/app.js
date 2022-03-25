@@ -10,6 +10,7 @@ const app = express();
 //--------------------------------------------
 
 const userRoutes = require('./routes/user');
+const loginRoutes = require('./routes/login');
 
 //--------------------------------------------
 
@@ -54,7 +55,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // ROUTES
 //--------------------------------------------
-app.use('/', userRoutes);
+app.use('/', loginRoutes);
 //--------------------------------------------
 
 // ARRANCANDO EL SERVIDOR
