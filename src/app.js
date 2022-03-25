@@ -9,7 +9,7 @@ const app = express();
 // IMPORTANDO RUTAS
 //--------------------------------------------
 
-const customerRoutes = require('./routes/customer');
+const userRoutes = require('./routes/user');
 
 //--------------------------------------------
 
@@ -54,7 +54,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // ROUTES
 //--------------------------------------------
-app.use('/', customerRoutes);
+app.use('/', userRoutes);
 //--------------------------------------------
 
 // ARRANCANDO EL SERVIDOR

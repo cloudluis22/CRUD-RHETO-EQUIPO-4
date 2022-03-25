@@ -13,12 +13,14 @@ controller.list = (req, res) => {
       res.json(err);
       return;
     }
-    conn.query('SELECT * FROM RETHO', (err, rows) => {
+    conn.query('SELECT * FROM usuarios', (err, rows) => {
       if (err) {
         console.error(err);
         res.json(err);
         return;
       }
+      console.log(rows);
+      res.render('users');
     });
   });
 };
