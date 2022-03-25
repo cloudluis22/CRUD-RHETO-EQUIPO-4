@@ -21,6 +21,8 @@ app.set('views', path.join(__dirname, 'views'));
 //--------------------------------------------
 
 // MIDDLEWARES
+//--------------------------------------------
+
 app.use(morgan('dev'));
 app.use(
   myConnection(
@@ -36,6 +38,14 @@ app.use(
   )
 );
 
+//--------------------------------------------
+
+// ARCHIVOS ESTÁTICOS
+//--------------------------------------------
+app.use(express.static(path.join(__dirname, 'public')));
+//--------------------------------------------
+
+// Arrancando el servidor
 app.listen(app.get('port'), () => {
   console.log('Servidor iniciado en el puerto 3000.');
 });
