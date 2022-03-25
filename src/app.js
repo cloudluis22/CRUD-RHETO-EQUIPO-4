@@ -6,6 +6,13 @@ const myConnection = require('express-myconnection');
 
 const app = express();
 
+// IMPORTANDO RUTAS
+//--------------------------------------------
+
+const customerRoutes = require('./routes/customer');
+
+//--------------------------------------------
+
 // CONFIGURACIONES DE EXPRESS.
 //--------------------------------------------
 
@@ -45,7 +52,12 @@ app.use(
 app.use(express.static(path.join(__dirname, 'public')));
 //--------------------------------------------
 
-// Arrancando el servidor
+// ROUTES
+//--------------------------------------------
+app.use('/', customerRoutes);
+//--------------------------------------------
+
+// ARRANCANDO EL SERVIDOR
 app.listen(app.get('port'), () => {
   console.log('Servidor iniciado en el puerto 3000.');
 });
