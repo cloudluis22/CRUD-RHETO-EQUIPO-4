@@ -13,15 +13,15 @@ controller.list = (req, res) => {
       res.json(err);
       return;
     }
-    conn.query('SELECT * FROM usuarios', (err, rows) => {
+    conn.query('SELECT * FROM usuarios', (err, f) => {
       if (err) {
         console.error(err);
         res.json(err);
         return;
       }
-      console.log(rows);
+      console.log(f);
       res.render('users', {
-        data: rows,
+        filas: f,
       });
     });
   });

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Login Retho </title>
     <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.11.0/sweetalert2.all.min.js"></script>
+
 </head>
 <body>
 
@@ -24,7 +26,7 @@
 
                     <div class="mb-3">
                         <label for="password" class="form-label"> Contraseña </label>
-                        <input type="text" id="password" name="password" placeholder="Contraseña" class="form-control" required autofocus>
+                        <input type="password" id="password" name="password" placeholder="Contraseña" class="form-control" required autofocus>
                     </div>
 
                     <button type="submit" class="btn btn-primary mx-auto d-block"> Iniciar Sesión </button>
@@ -34,4 +36,10 @@
     </div>
 
 </body>
+<script type="text/javascript">
+
+    if ("<%= data.failed %>" === "true") {
+        sweetAlert("Error", "Los datos ingresados no son validos", "error");
+    };
+  </script>
 </html>
